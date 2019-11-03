@@ -17,7 +17,7 @@ if CommandLine.argc < 2 {
     transcriber.requestTranscribePermissions()
     let filename = consoleIO.getFilename()
     let file = URL(string: filename.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-    //let text = transcriber.transcribeAudio(url: file!)
-    //print ("Text: \(text)")
+    // let text = transcriber.transcribeAudio(url: file!)
+    // print ("Text: \(text)")
     transcriber.transcribeAudio(url: file!)
 }

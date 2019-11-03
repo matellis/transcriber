@@ -9,11 +9,11 @@
 import Foundation
 
 enum OutputType {
-  case error
-  case standard
+    case error
+    case standard
 }
 
-class ConsoleIO{
+class ConsoleIO {
     func getFilename() -> String {
         consoleIO.printUsage()
         let filename = CommandLine.arguments[1]
@@ -21,23 +21,22 @@ class ConsoleIO{
         consoleIO.writeMessage("Filename: \(filename)")
         return filename
     }
-    
-    func writeMessage(_ message: String, to: OutputType = .standard) {
-      switch to {
-      case .standard:
-        print("\(message)")
-      case .error:
-        fputs("Error: \(message)\n", stderr)
-      }
-    }
-    
-    func printUsage() {
 
-      let executableName = (CommandLine.arguments[0] as NSString).lastPathComponent
-            
-      writeMessage("usage:")
-      writeMessage("\(executableName) -f file")
-      writeMessage("or")
-      writeMessage("\(executableName) -h to show usage information")
+    func writeMessage(_ message: String, to: OutputType = .standard) {
+        switch to {
+        case .standard:
+            print("\(message)")
+        case .error:
+            fputs("Error: \(message)\n", stderr)
+        }
+    }
+
+    func printUsage() {
+        let executableName = (CommandLine.arguments[0] as NSString).lastPathComponent
+
+        writeMessage("usage:")
+        writeMessage("\(executableName) -f file")
+        writeMessage("or")
+        writeMessage("\(executableName) -h to show usage information")
     }
 }
