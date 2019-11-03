@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = SwiftFormat;
+			productName = SwiftFormat;
 		};
 		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
 			isa = PBXAggregateTarget;
@@ -24,6 +25,7 @@
 			dependencies = (
 			);
 			name = SwiftLint;
+			productName = SwiftLint;
 		};
 /* End PBXAggregateTarget section */
 
@@ -80,13 +82,13 @@
 /* Begin PBXFileReference section */
 		06B70D97160FECA378C9DABFBBDC0B14 /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
 		08F119E3C0893AF5F0542DBCFD63D304 /* Pods-TranscriberTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TranscriberTests-Info.plist"; sourceTree = "<group>"; };
-		2520709EFBF7BAE97CE8AA996CFF56FE /* Pods_Transcriber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Transcriber.framework; path = "Pods-Transcriber.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2520709EFBF7BAE97CE8AA996CFF56FE /* Pods_Transcriber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transcriber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D4DE7ADE49E66F7A55155A3CFDDC5D3 /* Pods-TranscriberTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-TranscriberTests.debug.xcconfig"; sourceTree = "<group>"; };
 		36A8187730D69157AE616EAAF432730B /* Pods-TranscriberTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-TranscriberTests-umbrella.h"; sourceTree = "<group>"; };
 		48F03279C5B058ABF0154C97C3F543BC /* Pods-Transcriber-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Transcriber-acknowledgements.markdown"; sourceTree = "<group>"; };
 		549ECE3D4A5A2BA1051A53148D21494E /* SwiftFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftFormat.xcconfig; sourceTree = "<group>"; };
 		5F0427506847AAB4FA870F90679A648A /* Pods-TranscriberTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-TranscriberTests-dummy.m"; sourceTree = "<group>"; };
-		641FDF9C14250624090FD65EA4485299 /* Pods_TranscriberTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_TranscriberTests.framework; path = "Pods-TranscriberTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		641FDF9C14250624090FD65EA4485299 /* Pods_TranscriberTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranscriberTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		64982F0866A101177C2884185F6AC0CE /* Pods-Transcriber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Transcriber.debug.xcconfig"; sourceTree = "<group>"; };
 		6FEB4640C24C0C3F113AC22EAA82EE2F /* Pods-Transcriber-TranscriberUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Transcriber-TranscriberUITests-dummy.m"; sourceTree = "<group>"; };
 		71A68465509DF5C4D21E1822BE35EA66 /* Pods-Transcriber-TranscriberUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Transcriber-TranscriberUITests-umbrella.h"; sourceTree = "<group>"; };
@@ -95,7 +97,7 @@
 		88842A61F11D059C82790C2C701B3963 /* Pods-TranscriberTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-TranscriberTests.modulemap"; sourceTree = "<group>"; };
 		8AE644459C4547146E4EF6DC878167E4 /* Pods-Transcriber-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Transcriber-dummy.m"; sourceTree = "<group>"; };
 		9BE14169F4B6F358DB4ED2AA1A914236 /* Pods-Transcriber.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Transcriber.modulemap"; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A540A0E593BE57BE5CAF9B0B33C9E84D /* Pods-Transcriber-TranscriberUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Transcriber-TranscriberUITests.release.xcconfig"; sourceTree = "<group>"; };
 		B1C33868D2220006B551252FB4F2C323 /* Pods-Transcriber-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Transcriber-umbrella.h"; sourceTree = "<group>"; };
 		B889F0B9C4AE9C352F8F3B0D19105962 /* Pods-TranscriberTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-TranscriberTests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -107,7 +109,7 @@
 		D213405E2B2326AC10CB08D47CAE0348 /* Pods-Transcriber-TranscriberUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Transcriber-TranscriberUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E230FCACE94663DF7E5B2BCD6006B180 /* Pods-Transcriber-TranscriberUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Transcriber-TranscriberUITests.modulemap"; sourceTree = "<group>"; };
 		E6AA531F57CAAC78423E94D531609754 /* Pods-Transcriber-TranscriberUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Transcriber-TranscriberUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		E7627141F6EC14E6C39606BA1160A967 /* Pods_Transcriber_TranscriberUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Transcriber_TranscriberUITests.framework; path = "Pods-Transcriber-TranscriberUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7627141F6EC14E6C39606BA1160A967 /* Pods_Transcriber_TranscriberUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transcriber_TranscriberUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F940C819049CFF8741C0F5E3E075E607 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -153,7 +155,6 @@
 			children = (
 				4A93726AF8E11A1BEB3E6F8D5D6D533B /* Support Files */,
 			);
-			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -238,7 +239,6 @@
 			children = (
 				8930EC6D1973325C6724E7FC84A890A0 /* Support Files */,
 			);
-			name = SwiftFormat;
 			path = SwiftFormat;
 			sourceTree = "<group>";
 		};
@@ -375,7 +375,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1120;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 9.3";
@@ -489,7 +489,6 @@
 			baseConfigurationReference = E6AA531F57CAAC78423E94D531609754 /* Pods-Transcriber-TranscriberUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -653,7 +652,6 @@
 			baseConfigurationReference = 2D4DE7ADE49E66F7A55155A3CFDDC5D3 /* Pods-TranscriberTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -693,7 +691,6 @@
 			baseConfigurationReference = A540A0E593BE57BE5CAF9B0B33C9E84D /* Pods-Transcriber-TranscriberUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -732,7 +729,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06B70D97160FECA378C9DABFBBDC0B14 /* SwiftLint.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "-";
@@ -751,7 +747,6 @@
 			baseConfigurationReference = CA00339C80416DCE17F311A8B19340B2 /* Pods-TranscriberTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -790,7 +785,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 549ECE3D4A5A2BA1051A53148D21494E /* SwiftFormat.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
@@ -808,7 +802,6 @@
 			baseConfigurationReference = 64982F0866A101177C2884185F6AC0CE /* Pods-Transcriber.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -848,7 +841,6 @@
 			baseConfigurationReference = BB003C1B768D1915D658BC780EE81328 /* Pods-Transcriber.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -887,7 +879,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 06B70D97160FECA378C9DABFBBDC0B14 /* SwiftLint.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "-";
@@ -905,7 +896,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 549ECE3D4A5A2BA1051A53148D21494E /* SwiftFormat.xcconfig */;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
