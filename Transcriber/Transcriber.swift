@@ -30,7 +30,7 @@ class Transcriber {
 
     func transcribeAudio(url: URL, waiter: DispatchGroup) {
         // create a new recognizer and point it at our audio
-        let recognizer = SFSpeechRecognizer()
+        let recognizer = SFSpeechRecognizer(locale: Locale.current)
         if recognizer == nil {
             print("Got nil recognizer.  Bailing.")
             return
