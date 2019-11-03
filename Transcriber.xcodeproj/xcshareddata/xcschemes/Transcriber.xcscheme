@@ -35,7 +35,8 @@
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
-      useCustomWorkingDirectory = "NO"
+      useCustomWorkingDirectory = "YES"
+      customWorkingDirectory = "$(PROJECT_DIR)/transcriber"
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
@@ -52,7 +53,7 @@
       </BuildableProductRunnable>
       <CommandLineArguments>
          <CommandLineArgument
-            argument = "/Users/mellis/Library/Mobile\ Documents/iCloud~com~openplanetsoftware~just-press-record/Documents/2019-11-01/17-11-24.m4a"
+            argument = "./data/17-11-24.m4a"
             isEnabled = "YES">
          </CommandLineArgument>
       </CommandLineArguments>
