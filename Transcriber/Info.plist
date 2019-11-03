@@ -32,5 +32,7 @@
 	<true/>
 	<key>NSSupportsSuddenTermination</key>
 	<true/>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>TODO Replace me with explanation of how transcription API will be used.</string>
 </dict>
 </plist>
