@@ -14,10 +14,14 @@ let consoleIO = ConsoleIO()
 if CommandLine.argc < 2 {
     // TODO: Exit
 } else {
-    transcriber.requestTranscribePermissions()
+    let waiter = DispatchGroup()
+    transcriber.requestTranscribePermissions(waiter: waiter)
+    waiter.wait() // Blocks until the callback in requestTranscribePermissions is executed.
+
     let filename = consoleIO.getFilename()
     let file = URL(string: filename.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
     // let text = transcriber.transcribeAudio(url: file!)
     // print ("Text: \(text)")
-    transcriber.transcribeAudio(url: file!)
+    transcriber.transcribeAudio(url: file!, waiter: waiter)
+    waiter.wait()
 }
