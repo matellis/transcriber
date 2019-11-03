@@ -16,6 +16,8 @@
 		CC0692DC236F85B200672237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0692DA236F85B200672237 /* Main.storyboard */; };
 		CC0692E8236F85B200672237 /* TranscriberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0692E7236F85B200672237 /* TranscriberTests.swift */; };
 		CC0692F3236F85B200672237 /* TranscriberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0692F2236F85B200672237 /* TranscriberUITests.swift */; };
+		CC893589236F8C6D0073DBA8 /* Transcriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC893587236F8C6C0073DBA8 /* Transcriber.swift */; };
+		CC89358A236F8C6D0073DBA8 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC893588236F8C6C0073DBA8 /* ConsoleIO.swift */; };
 		D20B67FA29EE37126E68B4DC /* Pods_TranscriberTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60463F45A22E9CD2686C79D6 /* Pods_TranscriberTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +61,8 @@
 		CC0692EE236F85B200672237 /* TranscriberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranscriberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0692F2236F85B200672237 /* TranscriberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriberUITests.swift; sourceTree = "<group>"; };
 		CC0692F4236F85B200672237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC893587236F8C6C0073DBA8 /* Transcriber.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Transcriber.swift; sourceTree = "<group>"; };
+		CC893588236F8C6C0073DBA8 /* ConsoleIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
 		F94FF7726641C0452721D43B /* Pods-TranscriberTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranscriberTests.release.xcconfig"; path = "Target Support Files/Pods-TranscriberTests/Pods-TranscriberTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,7 +104,6 @@
 				42259DB10ACD4588F5E6B8C6 /* Pods-TranscriberTests.debug.xcconfig */,
 				F94FF7726641C0452721D43B /* Pods-TranscriberTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -139,6 +142,8 @@
 		CC0692D0236F85B100672237 /* Transcriber */ = {
 			isa = PBXGroup;
 			children = (
+				CC893588236F8C6C0073DBA8 /* ConsoleIO.swift */,
+				CC893587236F8C6C0073DBA8 /* Transcriber.swift */,
 				CC0692D1236F85B100672237 /* AppDelegate.swift */,
 				CC0692D3236F85B100672237 /* ContentView.swift */,
 				CC0692D5236F85B200672237 /* Assets.xcassets */,
@@ -380,7 +385,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC0692D4236F85B100672237 /* ContentView.swift in Sources */,
+				CC89358A236F8C6D0073DBA8 /* ConsoleIO.swift in Sources */,
 				CC0692D2236F85B100672237 /* AppDelegate.swift in Sources */,
+				CC893589236F8C6D0073DBA8 /* Transcriber.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

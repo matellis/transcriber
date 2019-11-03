@@ -15,10 +15,10 @@ enum OutputType {
 
 class ConsoleIO {
     func getFilename() -> String {
-        consoleIO.printUsage()
+        printUsage()
         let filename = CommandLine.arguments[1]
 
-        consoleIO.writeMessage("Filename: \(filename)")
+        writeMessage("Filename: \(filename)")
         return filename
     }
 

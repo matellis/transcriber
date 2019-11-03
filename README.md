@@ -14,6 +14,10 @@ brew install rbenv rbenv-gemset rbenv-binstubs
 rbenv install $(cat .ruby-version)
 
 rbenv rehash
-
-pod install
 ```
+
+## Working With the Project
+
+__NOTE: Be sure to open `Transcriber.xcworkspace`, not `Transcriber.xcodeproj`, or your builds will fail!__
+
+Some tasks are available via Rake.  Run `rake -T` to see them.
