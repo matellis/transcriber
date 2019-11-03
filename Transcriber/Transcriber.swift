@@ -28,6 +28,15 @@ class Transcriber {
     func transcribeAudio(url: URL) {
         // create a new recognizer and point it at our audio
         let recognizer = SFSpeechRecognizer()
+        if recognizer == nil {
+            print("Got nil recognizer.  Bailing.")
+            return
+        }
+        if !recognizer!.isAvailable {
+            print("Recognizer is unavailable.  Bailing.")
+            return
+        }
+
         let request = SFSpeechURLRecognitionRequest(url: url)
         print("Beginning transcription")
 
