@@ -1,2 +1,6 @@
+# Ignore Code user settings:
+xcuserdata/
+
+# Ignore audio samples:
 data/*
 !data/.gitkeep
