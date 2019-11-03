@@ -9,4 +9,5 @@ abstract_target 'DevTools' do
   platform :macos, '10.15'
 
   pod 'SwiftFormat/CLI'
+  pod 'SwiftLint'
 end

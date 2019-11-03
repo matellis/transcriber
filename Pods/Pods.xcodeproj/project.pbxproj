@@ -16,30 +16,58 @@
 			);
 			name = SwiftFormat;
 		};
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXFileReference section */
+		06B70D97160FECA378C9DABFBBDC0B14 /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
+		549ECE3D4A5A2BA1051A53148D21494E /* SwiftFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftFormat.xcconfig; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		B3D1274F25EC468DEE7AE31474C79C34 /* SwiftFormat.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftFormat.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-		148924D42F0B989B30887C4BD68CE662 /* Support Files */ = {
+		4A93726AF8E11A1BEB3E6F8D5D6D533B /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				B3D1274F25EC468DEE7AE31474C79C34 /* SwiftFormat.xcconfig */,
+				06B70D97160FECA378C9DABFBBDC0B14 /* SwiftLint.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
+		53D3A49A001BFD9799D1B53C33F841A7 /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				4A93726AF8E11A1BEB3E6F8D5D6D533B /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
+			sourceTree = "<group>";
+		};
+		8930EC6D1973325C6724E7FC84A890A0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				549ECE3D4A5A2BA1051A53148D21494E /* SwiftFormat.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftFormat";
 			sourceTree = "<group>";
 		};
-		717E5CB8C36289F022053164054847B2 /* SwiftFormat */ = {
+		8A0BDFAE11F73EFB936005F32975AE64 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				148924D42F0B989B30887C4BD68CE662 /* Support Files */,
+				AC8FE65366E8473C7B590383973D989F /* SwiftFormat */,
+				53D3A49A001BFD9799D1B53C33F841A7 /* SwiftLint */,
 			);
-			name = SwiftFormat;
-			path = SwiftFormat;
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		93BAFDF14BA360977052E7B9CCC18E94 /* Products */ = {
@@ -49,12 +77,13 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9B4BE7EA6762889896D8B43A53BE1AF4 /* Pods */ = {
+		AC8FE65366E8473C7B590383973D989F /* SwiftFormat */ = {
 			isa = PBXGroup;
 			children = (
-				717E5CB8C36289F022053164054847B2 /* SwiftFormat */,
+				8930EC6D1973325C6724E7FC84A890A0 /* Support Files */,
 			);
-			name = Pods;
+			name = SwiftFormat;
+			path = SwiftFormat;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -62,7 +91,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
-				9B4BE7EA6762889896D8B43A53BE1AF4 /* Pods */,
+				8A0BDFAE11F73EFB936005F32975AE64 /* Pods */,
 				93BAFDF14BA360977052E7B9CCC18E94 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -97,6 +126,7 @@
 			projectRoot = "";
 			targets = (
 				1CD0618C486973D5588EF20D2E8C0AEA /* SwiftFormat */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 			);
 		};
 /* End PBXProject section */
@@ -224,9 +254,24 @@
 			};
 			name = Debug;
 		};
+		8B2757D413B867ECEFDC200DDE84AFD2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B70D97160FECA378C9DABFBBDC0B14 /* SwiftLint.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		AB89F4BFC6922D6323F5D30C0C2F628B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3D1274F25EC468DEE7AE31474C79C34 /* SwiftFormat.xcconfig */;
+			baseConfigurationReference = 549ECE3D4A5A2BA1051A53148D21494E /* SwiftFormat.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -238,9 +283,24 @@
 			};
 			name = Release;
 		};
+		EBA0CC105C99CE8BFDA51C62E70EA605 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06B70D97160FECA378C9DABFBBDC0B14 /* SwiftLint.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
 		F634A49026474E8BADB64042BA05F60D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B3D1274F25EC468DEE7AE31474C79C34 /* SwiftFormat.xcconfig */;
+			baseConfigurationReference = 549ECE3D4A5A2BA1051A53148D21494E /* SwiftFormat.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -269,6 +329,15 @@
 			buildConfigurations = (
 				F634A49026474E8BADB64042BA05F60D /* Debug */,
 				AB89F4BFC6922D6323F5D30C0C2F628B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EBA0CC105C99CE8BFDA51C62E70EA605 /* Debug */,
+				8B2757D413B867ECEFDC200DDE84AFD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -10,7 +10,7 @@
             ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
             <ActionContent
                title = "Run Script"
-               scriptText = "&quot;${SRCROOT}/Pods/SwiftFormat/CommandLineTool/swiftformat&quot; &quot;${SRCROOT}&quot;&#10;">
+               scriptText = "&quot;${SRCROOT}/Pods/SwiftFormat/CommandLineTool/swiftformat&quot; &quot;${SRCROOT}&quot;&#10;&quot;${SRCROOT}/Pods/SwiftLint/swiftlint&quot;&#10;">
                <EnvironmentBuildable>
                   <BuildableReference
                      BuildableIdentifier = "primary"
@@ -59,24 +59,6 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <PreActions>
-         <ExecutionAction
-            ActionType = "Xcode.IDEStandardExecutionActionsCore.ExecutionActionType.ShellScriptAction">
-            <ActionContent
-               title = "Run Script"
-               scriptText = "&quot;${SRCROOT}/Pods/SwiftFormat/CommandLineTool/swiftformat&quot; &quot;${SRCROOT}&quot;&#10;">
-               <EnvironmentBuildable>
-                  <BuildableReference
-                     BuildableIdentifier = "primary"
-                     BlueprintIdentifier = "81169BEA236D036200BE4B7A"
-                     BuildableName = "Transcriber"
-                     BlueprintName = "Transcriber"
-                     ReferencedContainer = "container:Transcriber.xcodeproj">
-                  </BuildableReference>
-               </EnvironmentBuildable>
-            </ActionContent>
-         </ExecutionAction>
-      </PreActions>
       <BuildableProductRunnable
          runnableDebuggingMode = "0">
          <BuildableReference
