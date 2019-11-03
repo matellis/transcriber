@@ -29,6 +29,26 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.makeKeyAndOrderFront(nil)
     }
 
+    func doTheThing(_: Notification) {
+        let transcriber = TranscriptionService()
+        let consoleIO = ConsoleIO()
+
+        if CommandLine.argc < 2 {
+            // TODO: Exit
+        } else {
+            let waiter = DispatchGroup()
+            transcriber.requestTranscribePermissions(waiter: waiter)
+            waiter.wait() // Blocks until the callback in requestTranscribePermissions is executed.
+
+            let filename = consoleIO.getFilename()
+            let file = URL(string: filename.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+            // let text = transcriber.transcribeAudio(url: file!)
+            // print ("Text: \(text)")
+            transcriber.transcribeAudio(url: file!, waiter: waiter)
+            waiter.wait()
+        }
+    }
+
     func applicationWillTerminate(_: Notification) {
         // Insert code here to tear down your application
     }

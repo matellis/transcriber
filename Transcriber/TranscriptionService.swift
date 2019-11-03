@@ -10,7 +10,7 @@ import Darwin
 import Foundation
 import Speech
 
-class Transcriber {
+class TranscriptionService {
     let consoleIO = ConsoleIO()
 
     func requestTranscribePermissions(waiter: DispatchGroup) {
