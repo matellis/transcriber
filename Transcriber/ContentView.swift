@@ -9,14 +9,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    var transcriptionHandler: () -> Void
     var body: some View {
-        Text("Hello, World!")
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
+        Button(action: transcriptionHandler) {
+            Text("Click me!")
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(transcriptionHandler: {})
     }
 }

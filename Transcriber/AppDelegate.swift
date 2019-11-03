@@ -15,7 +15,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_: Notification) {
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView()
+        let contentView = ContentView(transcriptionHandler: {
+            self.doTheThing()
+        })
 
         // Create the window and set the content view.
         window = NSWindow(
@@ -29,7 +31,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         window.makeKeyAndOrderFront(nil)
     }
 
-    func doTheThing(_: Notification) {
+    func doTheThing() {
         let transcriber = TranscriptionService()
         let consoleIO = ConsoleIO()
 
