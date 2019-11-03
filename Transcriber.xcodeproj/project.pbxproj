@@ -7,77 +7,186 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		81169BEF236D036300BE4B7A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81169BEE236D036300BE4B7A /* main.swift */; };
-		81169BF6236D067D00BE4B7A /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81169BF5236D067D00BE4B7A /* ConsoleIO.swift */; };
-		81169BF8236D06FB00BE4B7A /* Transcriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81169BF7236D06FB00BE4B7A /* Transcriber.swift */; };
+		0E0E4F7846E55DF00D13030C /* Pods_Transcriber_TranscriberUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4792FED55B7ED60A5A8FBC /* Pods_Transcriber_TranscriberUITests.framework */; };
+		50253BDF986DB9D11E8C26E7 /* Pods_Transcriber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483BBE2186CB9299A99F11A6 /* Pods_Transcriber.framework */; };
+		CC0692D2236F85B100672237 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0692D1236F85B100672237 /* AppDelegate.swift */; };
+		CC0692D4236F85B100672237 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0692D3236F85B100672237 /* ContentView.swift */; };
+		CC0692D6236F85B200672237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0692D5236F85B200672237 /* Assets.xcassets */; };
+		CC0692D9236F85B200672237 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0692D8236F85B200672237 /* Preview Assets.xcassets */; };
+		CC0692DC236F85B200672237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0692DA236F85B200672237 /* Main.storyboard */; };
+		CC0692E8236F85B200672237 /* TranscriberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0692E7236F85B200672237 /* TranscriberTests.swift */; };
+		CC0692F3236F85B200672237 /* TranscriberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0692F2236F85B200672237 /* TranscriberUITests.swift */; };
+		D20B67FA29EE37126E68B4DC /* Pods_TranscriberTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60463F45A22E9CD2686C79D6 /* Pods_TranscriberTests.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		81169BE9236D036200BE4B7A /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
+/* Begin PBXContainerItemProxy section */
+		CC0692E4236F85B200672237 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC0692C6236F85B100672237 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC0692CD236F85B100672237;
+			remoteInfo = Transcriber;
 		};
-/* End PBXCopyFilesBuildPhase section */
+		CC0692EF236F85B200672237 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC0692C6236F85B100672237 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC0692CD236F85B100672237;
+			remoteInfo = Transcriber;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		81169BEB236D036300BE4B7A /* Transcriber */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Transcriber; sourceTree = BUILT_PRODUCTS_DIR; };
-		81169BEE236D036300BE4B7A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		81169BF5236D067D00BE4B7A /* ConsoleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
-		81169BF7236D06FB00BE4B7A /* Transcriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcriber.swift; sourceTree = "<group>"; };
+		2092E2C19F144547AEBC7790 /* Pods-Transcriber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transcriber.debug.xcconfig"; path = "Target Support Files/Pods-Transcriber/Pods-Transcriber.debug.xcconfig"; sourceTree = "<group>"; };
+		4127714984AB05167987F6E4 /* Pods-Transcriber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transcriber.release.xcconfig"; path = "Target Support Files/Pods-Transcriber/Pods-Transcriber.release.xcconfig"; sourceTree = "<group>"; };
+		42259DB10ACD4588F5E6B8C6 /* Pods-TranscriberTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranscriberTests.debug.xcconfig"; path = "Target Support Files/Pods-TranscriberTests/Pods-TranscriberTests.debug.xcconfig"; sourceTree = "<group>"; };
+		483BBE2186CB9299A99F11A6 /* Pods_Transcriber.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transcriber.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		60463F45A22E9CD2686C79D6 /* Pods_TranscriberTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TranscriberTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		669FD07FBDDEBC9CB01F688F /* Pods-Transcriber-TranscriberUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transcriber-TranscriberUITests.debug.xcconfig"; path = "Target Support Files/Pods-Transcriber-TranscriberUITests/Pods-Transcriber-TranscriberUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BD4792FED55B7ED60A5A8FBC /* Pods_Transcriber_TranscriberUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transcriber_TranscriberUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3AC6A91560E7FC382A978B8 /* Pods-Transcriber-TranscriberUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transcriber-TranscriberUITests.release.xcconfig"; path = "Target Support Files/Pods-Transcriber-TranscriberUITests/Pods-Transcriber-TranscriberUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC0692CE236F85B100672237 /* Transcriber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transcriber.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0692D1236F85B100672237 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CC0692D3236F85B100672237 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CC0692D5236F85B200672237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CC0692D8236F85B200672237 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CC0692DB236F85B200672237 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CC0692DD236F85B200672237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC0692DE236F85B200672237 /* Transcriber.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Transcriber.entitlements; sourceTree = "<group>"; };
+		CC0692E3236F85B200672237 /* TranscriberTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranscriberTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0692E7236F85B200672237 /* TranscriberTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriberTests.swift; sourceTree = "<group>"; };
+		CC0692E9236F85B200672237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CC0692EE236F85B200672237 /* TranscriberUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TranscriberUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC0692F2236F85B200672237 /* TranscriberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriberUITests.swift; sourceTree = "<group>"; };
+		CC0692F4236F85B200672237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F94FF7726641C0452721D43B /* Pods-TranscriberTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranscriberTests.release.xcconfig"; path = "Target Support Files/Pods-TranscriberTests/Pods-TranscriberTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		81169BE8236D036200BE4B7A /* Frameworks */ = {
+		CC0692CB236F85B100672237 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50253BDF986DB9D11E8C26E7 /* Pods_Transcriber.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0692E0236F85B200672237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D20B67FA29EE37126E68B4DC /* Pods_TranscriberTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0692EB236F85B200672237 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E0E4F7846E55DF00D13030C /* Pods_Transcriber_TranscriberUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		81169BE2236D036200BE4B7A = {
+		5A688E1647DA04AAE02B132F /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				81169BED236D036300BE4B7A /* Transcriber */,
-				81169BEC236D036300BE4B7A /* Products */,
+				2092E2C19F144547AEBC7790 /* Pods-Transcriber.debug.xcconfig */,
+				4127714984AB05167987F6E4 /* Pods-Transcriber.release.xcconfig */,
+				669FD07FBDDEBC9CB01F688F /* Pods-Transcriber-TranscriberUITests.debug.xcconfig */,
+				C3AC6A91560E7FC382A978B8 /* Pods-Transcriber-TranscriberUITests.release.xcconfig */,
+				42259DB10ACD4588F5E6B8C6 /* Pods-TranscriberTests.debug.xcconfig */,
+				F94FF7726641C0452721D43B /* Pods-TranscriberTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A73B0933504299BF560E6D50 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				483BBE2186CB9299A99F11A6 /* Pods_Transcriber.framework */,
+				BD4792FED55B7ED60A5A8FBC /* Pods_Transcriber_TranscriberUITests.framework */,
+				60463F45A22E9CD2686C79D6 /* Pods_TranscriberTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CC0692C5236F85B100672237 = {
+			isa = PBXGroup;
+			children = (
+				CC0692D0236F85B100672237 /* Transcriber */,
+				CC0692E6236F85B200672237 /* TranscriberTests */,
+				CC0692F1236F85B200672237 /* TranscriberUITests */,
+				CC0692CF236F85B100672237 /* Products */,
+				5A688E1647DA04AAE02B132F /* Pods */,
+				A73B0933504299BF560E6D50 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		81169BEC236D036300BE4B7A /* Products */ = {
+		CC0692CF236F85B100672237 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				81169BEB236D036300BE4B7A /* Transcriber */,
+				CC0692CE236F85B100672237 /* Transcriber.app */,
+				CC0692E3236F85B200672237 /* TranscriberTests.xctest */,
+				CC0692EE236F85B200672237 /* TranscriberUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		81169BED236D036300BE4B7A /* Transcriber */ = {
+		CC0692D0236F85B100672237 /* Transcriber */ = {
 			isa = PBXGroup;
 			children = (
-				81169BEE236D036300BE4B7A /* main.swift */,
-				81169BF5236D067D00BE4B7A /* ConsoleIO.swift */,
-				81169BF7236D06FB00BE4B7A /* Transcriber.swift */,
+				CC0692D1236F85B100672237 /* AppDelegate.swift */,
+				CC0692D3236F85B100672237 /* ContentView.swift */,
+				CC0692D5236F85B200672237 /* Assets.xcassets */,
+				CC0692DA236F85B200672237 /* Main.storyboard */,
+				CC0692DD236F85B200672237 /* Info.plist */,
+				CC0692DE236F85B200672237 /* Transcriber.entitlements */,
+				CC0692D7236F85B200672237 /* Preview Content */,
 			);
 			path = Transcriber;
+			sourceTree = "<group>";
+		};
+		CC0692D7236F85B200672237 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CC0692D8236F85B200672237 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CC0692E6236F85B200672237 /* TranscriberTests */ = {
+			isa = PBXGroup;
+			children = (
+				CC0692E7236F85B200672237 /* TranscriberTests.swift */,
+				CC0692E9236F85B200672237 /* Info.plist */,
+			);
+			path = TranscriberTests;
+			sourceTree = "<group>";
+		};
+		CC0692F1236F85B200672237 /* TranscriberUITests */ = {
+			isa = PBXGroup;
+			children = (
+				CC0692F2236F85B200672237 /* TranscriberUITests.swift */,
+				CC0692F4236F85B200672237 /* Info.plist */,
+			);
+			path = TranscriberUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		81169BEA236D036200BE4B7A /* Transcriber */ = {
+		CC0692CD236F85B100672237 /* Transcriber */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 81169BF2236D036300BE4B7A /* Build configuration list for PBXNativeTarget "Transcriber" */;
+			buildConfigurationList = CC0692F7236F85B200672237 /* Build configuration list for PBXNativeTarget "Transcriber" */;
 			buildPhases = (
-				81169BE7236D036200BE4B7A /* Sources */,
-				81169BE8236D036200BE4B7A /* Frameworks */,
-				81169BE9236D036200BE4B7A /* CopyFiles */,
+				61062B15FF55C92059F2F70F /* [CP] Check Pods Manifest.lock */,
+				CC0692CA236F85B100672237 /* Sources */,
+				CC0692CB236F85B100672237 /* Frameworks */,
+				CC0692CC236F85B100672237 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -85,25 +194,71 @@
 			);
 			name = Transcriber;
 			productName = Transcriber;
-			productReference = 81169BEB236D036300BE4B7A /* Transcriber */;
-			productType = "com.apple.product-type.tool";
+			productReference = CC0692CE236F85B100672237 /* Transcriber.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CC0692E2236F85B200672237 /* TranscriberTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC0692FA236F85B200672237 /* Build configuration list for PBXNativeTarget "TranscriberTests" */;
+			buildPhases = (
+				9C492D6BB9569DC786BB6756 /* [CP] Check Pods Manifest.lock */,
+				CC0692DF236F85B200672237 /* Sources */,
+				CC0692E0236F85B200672237 /* Frameworks */,
+				CC0692E1236F85B200672237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC0692E5236F85B200672237 /* PBXTargetDependency */,
+			);
+			name = TranscriberTests;
+			productName = TranscriberTests;
+			productReference = CC0692E3236F85B200672237 /* TranscriberTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CC0692ED236F85B200672237 /* TranscriberUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC0692FD236F85B200672237 /* Build configuration list for PBXNativeTarget "TranscriberUITests" */;
+			buildPhases = (
+				E2503C3F8D8B61F24C927044 /* [CP] Check Pods Manifest.lock */,
+				CC0692EA236F85B200672237 /* Sources */,
+				CC0692EB236F85B200672237 /* Frameworks */,
+				CC0692EC236F85B200672237 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CC0692F0236F85B200672237 /* PBXTargetDependency */,
+			);
+			name = TranscriberUITests;
+			productName = TranscriberUITests;
+			productReference = CC0692EE236F85B200672237 /* TranscriberUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		81169BE3236D036200BE4B7A /* Project object */ = {
+		CC0692C6236F85B100672237 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Mat Ellis";
 				TargetAttributes = {
-					81169BEA236D036200BE4B7A = {
+					CC0692CD236F85B100672237 = {
 						CreatedOnToolsVersion = 11.2;
+					};
+					CC0692E2236F85B200672237 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = CC0692CD236F85B100672237;
+					};
+					CC0692ED236F85B200672237 = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = CC0692CD236F85B100672237;
 					};
 				};
 			};
-			buildConfigurationList = 81169BE6236D036200BE4B7A /* Build configuration list for PBXProject "Transcriber" */;
+			buildConfigurationList = CC0692C9236F85B100672237 /* Build configuration list for PBXProject "Transcriber" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -111,31 +266,168 @@
 				en,
 				Base,
 			);
-			mainGroup = 81169BE2236D036200BE4B7A;
-			productRefGroup = 81169BEC236D036300BE4B7A /* Products */;
+			mainGroup = CC0692C5236F85B100672237;
+			productRefGroup = CC0692CF236F85B100672237 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				81169BEA236D036200BE4B7A /* Transcriber */,
+				CC0692CD236F85B100672237 /* Transcriber */,
+				CC0692E2236F85B200672237 /* TranscriberTests */,
+				CC0692ED236F85B200672237 /* TranscriberUITests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		CC0692CC236F85B100672237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC0692DC236F85B200672237 /* Main.storyboard in Resources */,
+				CC0692D9236F85B200672237 /* Preview Assets.xcassets in Resources */,
+				CC0692D6236F85B200672237 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0692E1236F85B200672237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0692EC236F85B200672237 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		61062B15FF55C92059F2F70F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Transcriber-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C492D6BB9569DC786BB6756 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TranscriberTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E2503C3F8D8B61F24C927044 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Transcriber-TranscriberUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
-		81169BE7236D036200BE4B7A /* Sources */ = {
+		CC0692CA236F85B100672237 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81169BEF236D036300BE4B7A /* main.swift in Sources */,
-				81169BF6236D067D00BE4B7A /* ConsoleIO.swift in Sources */,
-				81169BF8236D06FB00BE4B7A /* Transcriber.swift in Sources */,
+				CC0692D4236F85B100672237 /* ContentView.swift in Sources */,
+				CC0692D2236F85B100672237 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0692DF236F85B200672237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC0692E8236F85B200672237 /* TranscriberTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC0692EA236F85B200672237 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC0692F3236F85B200672237 /* TranscriberUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		CC0692E5236F85B200672237 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC0692CD236F85B100672237 /* Transcriber */;
+			targetProxy = CC0692E4236F85B200672237 /* PBXContainerItemProxy */;
+		};
+		CC0692F0236F85B200672237 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC0692CD236F85B100672237 /* Transcriber */;
+			targetProxy = CC0692EF236F85B200672237 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CC0692DA236F85B200672237 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CC0692DB236F85B200672237 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
-		81169BF0236D036300BE4B7A /* Debug */ = {
+		CC0692F5236F85B200672237 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -195,7 +487,7 @@
 			};
 			name = Debug;
 		};
-		81169BF1236D036300BE4B7A /* Release */ = {
+		CC0692F6236F85B200672237 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -248,46 +540,174 @@
 			};
 			name = Release;
 		};
-		81169BF3236D036300BE4B7A /* Debug */ = {
+		CC0692F8236F85B200672237 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2092E2C19F144547AEBC7790 /* Pods-Transcriber.debug.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Transcriber/Transcriber.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Transcriber/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Transcriber/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tecnh.Transcriber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.1.2;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		81169BF4236D036300BE4B7A /* Release */ = {
+		CC0692F9236F85B200672237 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4127714984AB05167987F6E4 /* Pods-Transcriber.release.xcconfig */;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Transcriber/Transcriber.entitlements;
 				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"Transcriber/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = Transcriber/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tecnh.Transcriber;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.1.2;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		CC0692FB236F85B200672237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42259DB10ACD4588F5E6B8C6 /* Pods-TranscriberTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TranscriberTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tecnh.TranscriberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transcriber.app/Contents/MacOS/Transcriber";
+			};
+			name = Debug;
+		};
+		CC0692FC236F85B200672237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F94FF7726641C0452721D43B /* Pods-TranscriberTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TranscriberTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				PRODUCT_BUNDLE_IDENTIFIER = com.tecnh.TranscriberTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Transcriber.app/Contents/MacOS/Transcriber";
+			};
+			name = Release;
+		};
+		CC0692FE236F85B200672237 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 669FD07FBDDEBC9CB01F688F /* Pods-Transcriber-TranscriberUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TranscriberUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tecnh.TranscriberUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Transcriber;
+			};
+			name = Debug;
+		};
+		CC0692FF236F85B200672237 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3AC6A91560E7FC382A978B8 /* Pods-Transcriber-TranscriberUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = TranscriberUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.tecnh.TranscriberUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = Transcriber;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		81169BE6236D036200BE4B7A /* Build configuration list for PBXProject "Transcriber" */ = {
+		CC0692C9236F85B100672237 /* Build configuration list for PBXProject "Transcriber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				81169BF0236D036300BE4B7A /* Debug */,
-				81169BF1236D036300BE4B7A /* Release */,
+				CC0692F5236F85B200672237 /* Debug */,
+				CC0692F6236F85B200672237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		81169BF2236D036300BE4B7A /* Build configuration list for PBXNativeTarget "Transcriber" */ = {
+		CC0692F7236F85B200672237 /* Build configuration list for PBXNativeTarget "Transcriber" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				81169BF3236D036300BE4B7A /* Debug */,
-				81169BF4236D036300BE4B7A /* Release */,
+				CC0692F8236F85B200672237 /* Debug */,
+				CC0692F9236F85B200672237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC0692FA236F85B200672237 /* Build configuration list for PBXNativeTarget "TranscriberTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC0692FB236F85B200672237 /* Debug */,
+				CC0692FC236F85B200672237 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CC0692FD236F85B200672237 /* Build configuration list for PBXNativeTarget "TranscriberUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC0692FE236F85B200672237 /* Debug */,
+				CC0692FF236F85B200672237 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 81169BE3236D036200BE4B7A /* Project object */;
+	rootObject = CC0692C6236F85B100672237 /* Project object */;
 }
