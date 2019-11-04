@@ -11,6 +11,7 @@ target 'Transcriber' do
   # Pods for Transcriber
   pod 'SwiftFormat/CLI'
   pod 'SwiftLint'
+  pod 'PathKit'
 
   target 'TranscriberTests' do
     inherit! :search_paths

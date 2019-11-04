@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,7 +17,6 @@
 		CC0692E8236F85B200672237 /* TranscriberTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0692E7236F85B200672237 /* TranscriberTests.swift */; };
 		CC0692F3236F85B200672237 /* TranscriberUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0692F2236F85B200672237 /* TranscriberUITests.swift */; };
 		CC893589236F8C6D0073DBA8 /* TranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC893587236F8C6C0073DBA8 /* TranscriptionService.swift */; };
-		CC89358A236F8C6D0073DBA8 /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC893588236F8C6C0073DBA8 /* ConsoleIO.swift */; };
 		D20B67FA29EE37126E68B4DC /* Pods_TranscriberTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60463F45A22E9CD2686C79D6 /* Pods_TranscriberTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,7 +61,6 @@
 		CC0692F2236F85B200672237 /* TranscriberUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriberUITests.swift; sourceTree = "<group>"; };
 		CC0692F4236F85B200672237 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CC893587236F8C6C0073DBA8 /* TranscriptionService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranscriptionService.swift; sourceTree = "<group>"; };
-		CC893588236F8C6C0073DBA8 /* ConsoleIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
 		F94FF7726641C0452721D43B /* Pods-TranscriberTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TranscriberTests.release.xcconfig"; path = "Target Support Files/Pods-TranscriberTests/Pods-TranscriberTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,7 +140,6 @@
 		CC0692D0236F85B100672237 /* Transcriber */ = {
 			isa = PBXGroup;
 			children = (
-				CC893588236F8C6C0073DBA8 /* ConsoleIO.swift */,
 				CC893587236F8C6C0073DBA8 /* TranscriptionService.swift */,
 				CC0692D1236F85B100672237 /* AppDelegate.swift */,
 				CC0692D3236F85B100672237 /* ContentView.swift */,
@@ -192,6 +189,7 @@
 				CC0692CA236F85B100672237 /* Sources */,
 				CC0692CB236F85B100672237 /* Frameworks */,
 				CC0692CC236F85B100672237 /* Resources */,
+				4CF8C111874CCB93C44880D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,6 +227,7 @@
 				CC0692EA236F85B200672237 /* Sources */,
 				CC0692EB236F85B200672237 /* Frameworks */,
 				CC0692EC236F85B200672237 /* Resources */,
+				C9C8E8D0C0EF1714BAAC2D6D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -311,6 +310,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		4CF8C111874CCB93C44880D5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Transcriber/Pods-Transcriber-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Transcriber/Pods-Transcriber-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Transcriber/Pods-Transcriber-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		61062B15FF55C92059F2F70F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -355,6 +371,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C9C8E8D0C0EF1714BAAC2D6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Transcriber-TranscriberUITests/Pods-Transcriber-TranscriberUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Transcriber-TranscriberUITests/Pods-Transcriber-TranscriberUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Transcriber-TranscriberUITests/Pods-Transcriber-TranscriberUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E2503C3F8D8B61F24C927044 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -385,7 +418,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC0692D4236F85B100672237 /* ContentView.swift in Sources */,
-				CC89358A236F8C6D0073DBA8 /* ConsoleIO.swift in Sources */,
 				CC0692D2236F85B100672237 /* AppDelegate.swift in Sources */,
 				CC893589236F8C6D0073DBA8 /* TranscriptionService.swift in Sources */,
 			);
@@ -639,7 +671,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 669FD07FBDDEBC9CB01F688F /* Pods-Transcriber-TranscriberUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TranscriberUITests/Info.plist;
@@ -659,7 +690,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3AC6A91560E7FC382A978B8 /* Pods-Transcriber-TranscriberUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = TranscriberUITests/Info.plist;

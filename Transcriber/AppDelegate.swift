@@ -7,7 +7,9 @@
 //
 
 import Cocoa
-import SwiftUI
+// import SwiftUI
+import PathKit
+import Speech
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -15,39 +17,39 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_: Notification) {
         // Create the SwiftUI view that provides the window contents.
-        let contentView = ContentView(transcriptionHandler: {
-            self.doTheThing()
-        })
-
-        // Create the window and set the content view.
-        window = NSWindow(
-            contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
-            styleMask: [.titled, .closable, .miniaturizable, .resizable, .fullSizeContentView],
-            backing: .buffered, defer: false
-        )
-        window.center()
-        window.setFrameAutosaveName("Main Window")
-        window.contentView = NSHostingView(rootView: contentView)
-        window.makeKeyAndOrderFront(nil)
+        // let contentView = ContentView(transcriptionHandler: {
+        //    self.doTheThing()
+        // })
+        //
+        //// Create the window and set the content view.
+        // window = NSWindow(
+        //    contentRect: NSRect(x: 0, y: 0, width: 480, height: 300),
+        //    styleMask: [.titled, .closable, .miniaturizable],
+        //    backing: .buffered, defer: false
+        // )
+        // window.center()
+        // window.setFrameAutosaveName("Main Window")
+        // window.contentView = NSHostingView(rootView: contentView)
+        // window.makeKeyAndOrderFront(nil)
+        doTheThing()
     }
 
     func doTheThing() {
         let transcriber = TranscriptionService()
-        let consoleIO = ConsoleIO()
 
         if CommandLine.argc < 2 {
-            // TODO: Exit
+            print("TODO: Usage.")
         } else {
-            let waiter = DispatchGroup()
-            transcriber.requestTranscribePermissions(waiter: waiter)
-            waiter.wait() // Blocks until the callback in requestTranscribePermissions is executed.
+            transcriber.requestTranscribePermissions()
 
-            let filename = consoleIO.getFilename()
-            let file = URL(string: filename.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-            // let text = transcriber.transcribeAudio(url: file!)
-            // print ("Text: \(text)")
-            transcriber.transcribeAudio(url: file!, waiter: waiter)
-            waiter.wait()
+            let rawFilenameArg = CommandLine.arguments[1]
+            let computedFilename = Path(rawFilenameArg).absolute().string
+            print("ACCESSING: ", computedFilename)
+
+            let fileURL = URL(string: "file://" + computedFilename.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+            print("COMPUTED URL: ", fileURL!)
+
+            transcriber.transcribeAudio(url: fileURL!)
         }
     }
 
