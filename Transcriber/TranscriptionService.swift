@@ -6,8 +6,6 @@
 //  Copyright © 2019 Mat Ellis. All rights reserved.
 //
 
-import Darwin
-import Foundation
 import Speech
 
 class TranscriptionService {
