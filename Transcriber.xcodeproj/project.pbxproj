@@ -9,7 +9,8 @@
 /* Begin PBXBuildFile section */
 		81169BEF236D036300BE4B7A /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81169BEE236D036300BE4B7A /* main.swift */; };
 		81169BF6236D067D00BE4B7A /* ConsoleIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81169BF5236D067D00BE4B7A /* ConsoleIO.swift */; };
-		81169BF8236D06FB00BE4B7A /* Transcriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81169BF7236D06FB00BE4B7A /* Transcriber.swift */; };
+		CC7EF9D1236FA5D500E1912F /* TranscriptionService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC7EF9D0236FA5D500E1912F /* TranscriptionService.swift */; };
+		D969DC9DF424B54631E13B1F /* libPods-Transcriber.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2C5ED0C7CA3C3ABD86EA973 /* libPods-Transcriber.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,10 +26,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		25C8782E4A71D1ABB3EB4BD8 /* Pods-Transcriber.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transcriber.release.xcconfig"; path = "Target Support Files/Pods-Transcriber/Pods-Transcriber.release.xcconfig"; sourceTree = "<group>"; };
 		81169BEB236D036300BE4B7A /* Transcriber */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Transcriber; sourceTree = BUILT_PRODUCTS_DIR; };
 		81169BEE236D036300BE4B7A /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		81169BF5236D067D00BE4B7A /* ConsoleIO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleIO.swift; sourceTree = "<group>"; };
-		81169BF7236D06FB00BE4B7A /* Transcriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcriber.swift; sourceTree = "<group>"; };
+		AB7424A7A4B5FB32B80772F2 /* Pods-Transcriber.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transcriber.debug.xcconfig"; path = "Target Support Files/Pods-Transcriber/Pods-Transcriber.debug.xcconfig"; sourceTree = "<group>"; };
+		CC7EF9D0236FA5D500E1912F /* TranscriptionService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionService.swift; sourceTree = "<group>"; };
+		D2C5ED0C7CA3C3ABD86EA973 /* libPods-Transcriber.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Transcriber.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,17 +40,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D969DC9DF424B54631E13B1F /* libPods-Transcriber.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		404667CD84EF01D0260D78D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2C5ED0C7CA3C3ABD86EA973 /* libPods-Transcriber.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		81169BE2236D036200BE4B7A = {
 			isa = PBXGroup;
 			children = (
 				81169BED236D036300BE4B7A /* Transcriber */,
 				81169BEC236D036300BE4B7A /* Products */,
+				D8257E11514488C21DA02B94 /* Pods */,
+				404667CD84EF01D0260D78D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,9 +78,18 @@
 			children = (
 				81169BEE236D036300BE4B7A /* main.swift */,
 				81169BF5236D067D00BE4B7A /* ConsoleIO.swift */,
-				81169BF7236D06FB00BE4B7A /* Transcriber.swift */,
+				CC7EF9D0236FA5D500E1912F /* TranscriptionService.swift */,
 			);
 			path = Transcriber;
+			sourceTree = "<group>";
+		};
+		D8257E11514488C21DA02B94 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AB7424A7A4B5FB32B80772F2 /* Pods-Transcriber.debug.xcconfig */,
+				25C8782E4A71D1ABB3EB4BD8 /* Pods-Transcriber.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -75,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 81169BF2236D036300BE4B7A /* Build configuration list for PBXNativeTarget "Transcriber" */;
 			buildPhases = (
+				270301D29A90A77C3E8CEACB /* [CP] Check Pods Manifest.lock */,
 				81169BE7236D036200BE4B7A /* Sources */,
 				81169BE8236D036200BE4B7A /* Frameworks */,
 				81169BE9236D036200BE4B7A /* CopyFiles */,
@@ -121,6 +146,31 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		270301D29A90A77C3E8CEACB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Transcriber-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		81169BE7236D036200BE4B7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -128,7 +178,7 @@
 			files = (
 				81169BEF236D036300BE4B7A /* main.swift in Sources */,
 				81169BF6236D067D00BE4B7A /* ConsoleIO.swift in Sources */,
-				81169BF8236D06FB00BE4B7A /* Transcriber.swift in Sources */,
+				CC7EF9D1236FA5D500E1912F /* TranscriptionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +300,9 @@
 		};
 		81169BF3236D036300BE4B7A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB7424A7A4B5FB32B80772F2 /* Pods-Transcriber.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.1.2;
@@ -259,7 +311,9 @@
 		};
 		81169BF4236D036300BE4B7A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25C8782E4A71D1ABB3EB4BD8 /* Pods-Transcriber.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.1.2;

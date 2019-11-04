@@ -7,21 +7,22 @@
 //
 
 import Foundation
+import PathKit
 
-let transcriber = Transcriber()
+let transcriber = TranscriptionService()
 let consoleIO = ConsoleIO()
 
 if CommandLine.argc < 2 {
     // TODO: Exit
 } else {
-    let waiter = DispatchGroup()
-    transcriber.requestTranscribePermissions(waiter: waiter)
-    waiter.wait() // Blocks until the callback in requestTranscribePermissions is executed.
+    transcriber.requestTranscribePermissions()
 
-    let filename = consoleIO.getFilename()
-    let file = URL(string: filename.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-    // let text = transcriber.transcribeAudio(url: file!)
-    // print ("Text: \(text)")
-    transcriber.transcribeAudio(url: file!, waiter: waiter)
-    waiter.wait()
+    let rawFilenameArg = CommandLine.arguments[1]
+    let computedFilename = Path(rawFilenameArg).absolute().string
+    print("ACCESSING: ", computedFilename)
+
+    let fileURL = URL(string: "file://" + computedFilename.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+    print("COMPUTED URL: ", fileURL!)
+
+    transcriber.transcribeAudio(url: fileURL!)
 }

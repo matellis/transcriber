@@ -1,5 +1,5 @@
 //
-//  Transcriber.swift
+//  TranscriptionService.swift
 //  Transcriber
 //
 //  Created by Mat Ellis on 11/1/19.
@@ -10,11 +10,23 @@ import Darwin
 import Foundation
 import Speech
 
-class Transcriber {
-    let consoleIO = ConsoleIO()
+class TranscriptionService {
+    func requestTranscribePermissions() {
+        if SFSpeechRecognizer.authorizationStatus() == SFSpeechRecognizerAuthorizationStatus.authorized {
+            // All good!
+            print("Bypassing permissions request, because we seem to be authorized already.")
+            return
+        }
 
-    func requestTranscribePermissions(waiter: DispatchGroup) {
+        // TODO: Sort out which of the following cases we get an authorization callback for:
+        // SFSpeechRecognizerAuthorizationStatus.notDetermined
+        // SFSpeechRecognizerAuthorizationStatus.denied
+        // SFSpeechRecognizerAuthorizationStatus.restricted
+        // SFSpeechRecognizerAuthorizationStatus.authorized
+
         print("Requesting speech recognizer permission")
+
+        let waiter = DispatchGroup()
         waiter.enter()
         SFSpeechRecognizer.requestAuthorization { authStatus in
             DispatchQueue.main.async {
@@ -26,32 +38,36 @@ class Transcriber {
                 waiter.leave()
             }
         }
+        waiter.wait()
     }
 
-    func transcribeAudio(url: URL, waiter: DispatchGroup) {
+    func transcribeAudio(url: URL) {
         // create a new recognizer and point it at our audio
         let recognizer = SFSpeechRecognizer(locale: Locale.current)
         if recognizer == nil {
             print("Got nil recognizer.  Bailing.")
             return
         }
-        if !recognizer!.isAvailable {
-            print("Recognizer is unavailable.  Bailing.")
-            return
-        }
+        // if !recognizer!.isAvailable {
+        //    print("Recognizer is unavailable.  Bailing.")
+        //    return
+        // }
 
         let request = SFSpeechURLRecognitionRequest(url: url)
         print("Beginning transcription")
 
-        // start recognition!
+        let waiter = DispatchGroup()
         waiter.enter()
-        recognizer?.recognitionTask(with: request) { result, _ in
+        recognizer?.recognitionTask(with: request) { result, error in
+            print("Got a callback!")
+
             // abort if we didn't get any transcription back
-            guard let result = result else { return } // else {
-            //               print ("BAD")
-            //               print ("There was an error in transcribing: \(error!)")
-            //               return
-            //           }
+            guard let result = result else {
+                print("BAD")
+                print("There was an error in transcribing: \(error!)")
+                waiter.leave()
+                return
+            }
 
             // if we got the final transcription back, print it
             if result.isFinal {
@@ -62,7 +78,8 @@ class Transcriber {
                 print("INTERMEDIATE: ", result.bestTranscription.formattedString)
             }
         }
-        print("Ending transcription")
+        waiter.wait()
+        print("Finished transcription")
 
         return
     }
