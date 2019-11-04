@@ -24,19 +24,16 @@ class TranscriptionService {
 
         print("Requesting speech recognizer permission")
 
-        let waiter = DispatchGroup()
-        waiter.enter()
         SFSpeechRecognizer.requestAuthorization { authStatus in
+            // TODO: Write something into a queue and use an FSM to coordinate things...
             // DispatchQueue.main.async {
             if authStatus == .authorized {
                 print("Transcribe permission obtained")
             } else {
                 print("Transcribe permission denied")
             }
-            waiter.leave()
             // }
         }
-        waiter.wait()
     }
 
     func transcribeAudio(url: URL) {
@@ -46,39 +43,37 @@ class TranscriptionService {
             print("Got nil recognizer.  Bailing.")
             return
         }
-        if !recognizer!.isAvailable {
-            print("Recognizer is unavailable.  Bailing.")
-            return
-        }
 
-        let request = SFSpeechURLRecognitionRequest(url: url)
+        // On a pure CLI app, the following always prints/returns.  On a "GUI" app, it never does,
+        // even if I decline permissions:
+        // if !recognizer!.isAvailable {
+        //    print("Recognizer is unavailable.  Bailing.")
+        //    return
+        // }
+
+        // DispatchQueue.main.async {
         print("Beginning transcription")
 
-        let waiter = DispatchGroup()
-        waiter.enter()
-        recognizer?.recognitionTask(with: request) { result, error in
-            print("Got a callback!")
+        let request = SFSpeechURLRecognitionRequest(url: url)
 
-            // abort if we didn't get any transcription back
+        recognizer?.recognitionTask(with: request) { result, error in
+            // TODO: Write something into a queue and use an FSM to coordinate things...
+
+            // Abort if we didn't get any transcription back
             guard let result = result else {
-                print("BAD")
-                print("There was an error in transcribing: \(error!)")
-                waiter.leave()
+                print("FAIL: \(error!)")
                 return
             }
 
-            // if we got the final transcription back, print it
+            // Print whatever we've got, along with whether or not it's final
             if result.isFinal {
-                // pull out the best transcription...
                 print("FINAL RESULT: ", result.bestTranscription.formattedString)
-                waiter.leave()
             } else {
                 print("INTERMEDIATE: ", result.bestTranscription.formattedString)
             }
         }
-        waiter.wait()
-        print("Finished transcription")
 
         return
+            // }
     }
 }
