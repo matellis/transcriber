@@ -10,7 +10,7 @@ target 'Transcriber' do
 
   # Pods for Transcriber
   pod 'SwiftFormat/CLI'
-  pod 'SwiftLint'
+  pod 'SwiftLint' # TODO: This isn't set up properly -- messages don't show, and builds don't fail!
   pod 'PathKit'
 
   target 'TranscriberTests' do
@@ -18,6 +18,7 @@ target 'Transcriber' do
     # Pods for testing
   end
 
+  # TODO: Abandon the UI stuff entirely.
   target 'TranscriberUITests' do
     # Pods for testing
   end
