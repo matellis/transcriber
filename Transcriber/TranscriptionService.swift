@@ -27,14 +27,14 @@ class TranscriptionService {
         let waiter = DispatchGroup()
         waiter.enter()
         SFSpeechRecognizer.requestAuthorization { authStatus in
-            DispatchQueue.main.async {
-                if authStatus == .authorized {
-                    print("Transcribe permission obtained")
-                } else {
-                    print("Transcribe permission denied")
-                }
-                waiter.leave()
+            // DispatchQueue.main.async {
+            if authStatus == .authorized {
+                print("Transcribe permission obtained")
+            } else {
+                print("Transcribe permission denied")
             }
+            waiter.leave()
+            // }
         }
         waiter.wait()
     }
