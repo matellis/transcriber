@@ -10,11 +10,11 @@ import Speech
 
 class TranscriptionService {
     func requestTranscribePermissions() {
-        if SFSpeechRecognizer.authorizationStatus() == SFSpeechRecognizerAuthorizationStatus.authorized {
-            // All good!
-            print("Bypassing permissions request, because we seem to be authorized already.")
-            return
-        }
+        // if SFSpeechRecognizer.authorizationStatus() == SFSpeechRecognizerAuthorizationStatus.authorized {
+        //    // All good!
+        //    print("Bypassing permissions request, because we seem to be authorized already.")
+        //    return
+        // }
 
         // TODO: Sort out which of the following cases we get an authorization callback for:
         // SFSpeechRecognizerAuthorizationStatus.notDetermined
