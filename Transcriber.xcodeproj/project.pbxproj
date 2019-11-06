@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E0E4F7846E55DF00D13030C /* Pods_Transcriber_TranscriberUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD4792FED55B7ED60A5A8FBC /* Pods_Transcriber_TranscriberUITests.framework */; };
 		50253BDF986DB9D11E8C26E7 /* Pods_Transcriber.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 483BBE2186CB9299A99F11A6 /* Pods_Transcriber.framework */; };
+		CC020570237276C10042F4BA /* UnixInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC02056F237276C10042F4BA /* UnixInterface.swift */; };
 		CC0692D2236F85B100672237 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0692D1236F85B100672237 /* AppDelegate.swift */; };
 		CC0692D6236F85B200672237 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CC0692D5236F85B200672237 /* Assets.xcassets */; };
 		CC0692DC236F85B200672237 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC0692DA236F85B200672237 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 		669FD07FBDDEBC9CB01F688F /* Pods-Transcriber-TranscriberUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transcriber-TranscriberUITests.debug.xcconfig"; path = "Target Support Files/Pods-Transcriber-TranscriberUITests/Pods-Transcriber-TranscriberUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		BD4792FED55B7ED60A5A8FBC /* Pods_Transcriber_TranscriberUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Transcriber_TranscriberUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C3AC6A91560E7FC382A978B8 /* Pods-Transcriber-TranscriberUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Transcriber-TranscriberUITests.release.xcconfig"; path = "Target Support Files/Pods-Transcriber-TranscriberUITests/Pods-Transcriber-TranscriberUITests.release.xcconfig"; sourceTree = "<group>"; };
+		CC02056F237276C10042F4BA /* UnixInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnixInterface.swift; sourceTree = "<group>"; };
 		CC0692CE236F85B100672237 /* Transcriber.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Transcriber.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC0692D1236F85B100672237 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC0692D5236F85B200672237 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				CC0692DA236F85B200672237 /* Main.storyboard */,
 				CC0692DD236F85B200672237 /* Info.plist */,
 				CC0692DE236F85B200672237 /* Transcriber.entitlements */,
+				CC02056F237276C10042F4BA /* UnixInterface.swift */,
 			);
 			path = Transcriber;
 			sourceTree = "<group>";
@@ -403,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC0692D2236F85B100672237 /* AppDelegate.swift in Sources */,
+				CC020570237276C10042F4BA /* UnixInterface.swift in Sources */,
 				CC893589236F8C6D0073DBA8 /* TranscriptionService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

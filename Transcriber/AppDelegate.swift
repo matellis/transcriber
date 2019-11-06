@@ -7,8 +7,7 @@
 //
 
 import Cocoa
-// import SwiftUI
-import PathKit
+// import PathKit
 import Speech
 
 @NSApplicationMain
@@ -18,24 +17,28 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(_: Notification) {
         if CommandLine.argc < 2 {
             print("TODO: Usage.")
-            return
+            exit(UnixInterface.ErrInvalidArgs)
+            // return
         }
+
+        let computedFilename = CommandLine.arguments[1]
+        // let computedFilename = Path(CommandLine.arguments[1]).absolute().string
+        // print("ACCESSING: ", computedFilename)
+        let fileURL = URL(fileURLWithPath: computedFilename)
+        // let fileURL = URL(string: "file://" + computedFilename.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
+        // print("COMPUTED URL: ", fileURL.absoluteString)
+
+        // TODO: Ensure the file exists, etc.
 
         let transcriber = TranscriptionService()
 
         transcriber.requestTranscribePermissions()
 
-        let rawFilenameArg = CommandLine.arguments[1]
-        let computedFilename = Path(rawFilenameArg).absolute().string
-        print("ACCESSING: ", computedFilename)
-
-        let fileURL = URL(string: "file://" + computedFilename.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)
-        print("COMPUTED URL: ", fileURL!)
-
-        transcriber.transcribeAudio(url: fileURL!)
+        transcriber.transcribeAudio(url: fileURL)
     }
 
     func applicationWillTerminate(_: Notification) {
-        // Insert code here to tear down your application
+        // TODO: We're using `exit` to end the program right now.  That doesn't go through the normal
+        // TODO: Cocoa shutdown process.  Perhaps we want to change that?
     }
 }

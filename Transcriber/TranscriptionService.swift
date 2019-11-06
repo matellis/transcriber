@@ -9,6 +9,11 @@
 import Speech
 
 class TranscriptionService {
+    private let concurrentPhotoQueue = DispatchQueue(
+        label: "com.tecnh.Transcriber.transcriptionQueue",
+        attributes: .concurrent
+    )
+
     func requestTranscribePermissions() {
         // if SFSpeechRecognizer.authorizationStatus() == SFSpeechRecognizerAuthorizationStatus.authorized {
         //    // All good!
@@ -22,7 +27,7 @@ class TranscriptionService {
         // SFSpeechRecognizerAuthorizationStatus.restricted
         // SFSpeechRecognizerAuthorizationStatus.authorized
 
-        print("Requesting speech recognizer permission")
+        // print("Requesting speech recognizer permission")
 
         SFSpeechRecognizer.requestAuthorization { authStatus in
             // TODO: Write something into a queue and use an FSM to coordinate things...
@@ -31,6 +36,7 @@ class TranscriptionService {
                 print("Transcribe permission obtained")
             } else {
                 print("Transcribe permission denied")
+                exit(1)
             }
             // }
         }
@@ -40,8 +46,9 @@ class TranscriptionService {
         // create a new recognizer and point it at our audio
         let recognizer = SFSpeechRecognizer(locale: Locale.current)
         if recognizer == nil {
-            print("Got nil recognizer.  Bailing.")
-            return
+            print("ERROR: Couldn't obtain recognizer!")
+            exit(UnixInterface.ErrRecognizerUnavailable)
+            // return
         }
 
         // On a pure CLI app, the following always prints/returns.  On a "GUI" app, it never does,
@@ -51,29 +58,40 @@ class TranscriptionService {
         //    return
         // }
 
-        // DispatchQueue.main.async {
-        print("Beginning transcription")
-
-        let request = SFSpeechURLRecognitionRequest(url: url)
-
-        recognizer?.recognitionTask(with: request) { result, error in
-            // TODO: Write something into a queue and use an FSM to coordinate things...
-
-            // Abort if we didn't get any transcription back
-            guard let result = result else {
-                print("FAIL: \(error!)")
-                return
-            }
-
-            // Print whatever we've got, along with whether or not it's final
-            if result.isFinal {
-                print("FINAL RESULT: ", result.bestTranscription.formattedString)
-            } else {
-                print("INTERMEDIATE: ", result.bestTranscription.formattedString)
-            }
-        }
-
-        return
+        concurrentPhotoQueue.async() { // [weak self] in
+            // guard let self = self else {
+            //    print("BOOM!")
+            //    return
             // }
+
+            print("Beginning transcription")
+
+            let request = SFSpeechURLRecognitionRequest(url: url)
+
+            // request.requiresOnDeviceRecognition = true
+
+            recognizer?.recognitionTask(with: request) { result, error in
+                guard let result = result else {
+                    print("ERROR: \(error!)")
+                    DispatchQueue.main.async {
+                        exit(UnixInterface.ErrRecognitionFailed)
+                    }
+                    return
+                }
+
+                // Print whatever we've got, along with whether or not it's final
+                if result.isFinal {
+                    // TODO: Write something into a queue and use an FSM to coordinate things...
+                    print("FINAL RESULT: ", result.bestTranscription.formattedString)
+                    DispatchQueue.main.async {
+                        exit(UnixInterface.Success)
+                    }
+                } else {
+                    print("INTERMEDIATE: ", result.bestTranscription.formattedString)
+                }
+            }
+
+            return
+        }
     }
 }
