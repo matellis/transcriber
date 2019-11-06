@@ -1,24 +1,20 @@
 PODS:
-  - PathKit (1.0.0)
   - SwiftFormat/CLI (0.40.14)
   - SwiftLint (0.36.0)
 
 DEPENDENCIES:
-  - PathKit
   - SwiftFormat/CLI
   - SwiftLint
 
 SPEC REPOS:
   trunk:
-    - PathKit
     - SwiftFormat
     - SwiftLint
 
 SPEC CHECKSUMS:
-  PathKit: 364e0de7fb5adb142aecab4e112187e5548fc4b6
   SwiftFormat: 21c9c3c748d5fcece493d8610eee23df15393458
   SwiftLint: fc9859e4e1752340664851f667bb1898b9c90114
 
-PODFILE CHECKSUM: 9055df0e5227323e1cd896b0160cbe41dfa18378
+PODFILE CHECKSUM: dbea40e3ed10b17bb099a0872c41aea0fe0c80fd
 
 COCOAPODS: 1.8.4

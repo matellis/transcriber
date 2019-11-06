@@ -11,7 +11,7 @@ target 'Transcriber' do
   # Pods for Transcriber
   pod 'SwiftFormat/CLI'
   pod 'SwiftLint' # TODO: This isn't set up properly -- messages don't show, and builds don't fail!
-  pod 'PathKit'
+  # pod 'PathKit'
 
   target 'TranscriberTests' do
     inherit! :search_paths
