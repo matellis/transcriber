@@ -31,24 +31,22 @@ class TranscriptionService {
 
         SFSpeechRecognizer.requestAuthorization { authStatus in
             // TODO: Write something into a queue and use an FSM to coordinate things...
-            // DispatchQueue.main.async {
             if authStatus == .authorized {
                 print("Transcribe permission obtained")
             } else {
                 print("Transcribe permission denied")
-                exit(1)
+                DispatchQueue.main.async {
+                    exit(UnixInterface.ErrSpeechPermissionDenied)
+                }
             }
-            // }
         }
     }
 
     func transcribeAudio(url: URL) {
-        // create a new recognizer and point it at our audio
         let recognizer = SFSpeechRecognizer(locale: Locale.current)
         if recognizer == nil {
             print("ERROR: Couldn't obtain recognizer!")
             exit(UnixInterface.ErrRecognizerUnavailable)
-            // return
         }
 
         // On a pure CLI app, the following always prints/returns.  On a "GUI" app, it never does,
@@ -58,12 +56,7 @@ class TranscriptionService {
         //    return
         // }
 
-        concurrentPhotoQueue.async() { // [weak self] in
-            // guard let self = self else {
-            //    print("BOOM!")
-            //    return
-            // }
-
+        concurrentPhotoQueue.async() {
             print("Beginning transcription")
 
             let request = SFSpeechURLRecognitionRequest(url: url)
@@ -76,7 +69,6 @@ class TranscriptionService {
                     DispatchQueue.main.async {
                         exit(UnixInterface.ErrRecognitionFailed)
                     }
-                    return
                 }
 
                 // Print whatever we've got, along with whether or not it's final
