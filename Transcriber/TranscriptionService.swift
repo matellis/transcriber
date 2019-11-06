@@ -62,6 +62,7 @@ class TranscriptionService {
             let request = SFSpeechURLRecognitionRequest(url: url)
 
             // request.requiresOnDeviceRecognition = true
+            // request.shouldReportPartialResults = true
 
             recognizer?.recognitionTask(with: request) { result, error in
                 guard let result = result else {
