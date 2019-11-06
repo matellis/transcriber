@@ -69,6 +69,7 @@ class TranscriptionService {
                     DispatchQueue.main.async {
                         exit(UnixInterface.ErrRecognitionFailed)
                     }
+                    return
                 }
 
                 // Print whatever we've got, along with whether or not it's final
