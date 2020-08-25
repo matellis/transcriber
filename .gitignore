@@ -4,3 +4,4 @@ xcuserdata/
 # Ignore audio samples:
 #data/*
 !data/.gitkeep
+builds/
